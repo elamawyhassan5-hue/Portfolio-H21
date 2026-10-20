@@ -89,12 +89,13 @@ section h2 {
 }
 
 .about-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  overflow: auto;
 }
 
 .about-content img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -133,16 +134,19 @@ section h2 {
 
 .skills-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  overflow: auto;
 }
 
 .skills-list li {
-  flex: 1 1 120px;
+  float: left;
   padding: 14px;
   background-color: #f5f9ff;
   border-radius: 8px;
+  width: 18%;
+  margin-right: 2.5%;
+}
+.skills-list li:nth-child(5n) {
+  margin-right: 0;
 }
 
 .skills-list h3 {
@@ -164,9 +168,6 @@ section h2 {
 }
 
 .job-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   margin-bottom: 10px;
 }
 
@@ -244,8 +245,23 @@ footer span {
 }
 
 @media (max-width: 600px) {
-  .about-content {
-    flex-direction: column;
+  .about-content img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  .about-text {
     text-align: center;
+  }
+
+  .skills-list li {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 14px;
+  }
+
+  .skills-list li:nth-child(2n) {
+    margin-right: 0;
   }
 }
