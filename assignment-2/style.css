@@ -1,0 +1,763 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: black;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  padding: 20px 0;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 5px;
+  color: dimgray;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: dodgerblue;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: dodgerblue;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+.logo img {
+  width: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: dodgerblue;
+}
+
+.nav-links .active {
+  color: dodgerblue;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Image card */
+.hero-image {
+  position: relative;
+  width: 50%;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 25px;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.discount {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hero-text {
+  width: 50%;
+  padding-left: 50px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 12px;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: royalblue;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.blue-text {
+  color: dodgerblue;
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: dimgray;
+  margin-bottom: 25px;
+}
+
+/* Prices */
+.price-now {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.price-old {
+  color: gray;
+  text-decoration: line-through;
+  margin: 0 10px;
+}
+
+.save {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: mistyrose;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.installments {
+  font-size: 14px;
+  color: dimgray;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 16px 28px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-blue {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  color: white;
+}
+
+.btn-outline {
+  background-color: white;
+  color: black;
+}
+
+.hero-text button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btn-icon {
+  width: 18px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.gray-bg {
+  background-color: whitesmoke;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 22px;
+  color: dimgray;
+}
+
+.card {
+  padding: 30px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
+
+/* Key Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature {
+  color: dimgray;
+  transition: all 0.3s;
+}
+
+.feature-icon {
+  display: block;
+  width: 50px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background-color: lightblue;
+}
+
+.small-title {
+  margin-bottom: 10px;
+  color: dodgerblue;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: black;
+  font-size: 22px;
+}
+
+.stat {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid whitesmoke;
+  font-size: 14px;
+}
+
+.stat strong {
+  display: block;
+  color: dodgerblue;
+  font-size: 28px;
+}
+
+/* Call to action box */
+.cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  padding: 40px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 25px;
+}
+
+.cta-small {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cta-box h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.btn-white {
+  background-color: white;
+  border-color: white;
+  color: dodgerblue;
+}
+
+/* Reviews */
+.stars {
+  color: orange;
+}
+
+.reviews-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.summary {
+  position: sticky;
+  top: 100px;
+  color: dimgray;
+}
+
+.summary-score {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.summary-bars {
+  margin-bottom: 25px;
+}
+
+.summary-extra {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-top: 1px solid whitesmoke;
+  text-align: center;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.big-number {
+  font-size: 56px;
+  font-weight: bold;
+  color: black;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.bar-row span {
+  width: 45px;
+  font-size: 14px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: gold;
+  border-radius: 10px;
+}
+
+.mid-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Review cards */
+.review {
+  color: dimgray;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-top h4 {
+  font-size: 18px;
+  color: black;
+}
+
+.review-top p {
+  font-size: 14px;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.verified {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: aliceblue;
+  color: royalblue;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Related Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card.product {
+  padding: 15px;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.product-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: dodgerblue;
+  color: dimgray;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product-info {
+  padding: 20px 5px 5px;
+  color: dimgray;
+}
+
+.product-info h3 {
+  margin-bottom: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+.product-info p {
+  min-height: 70px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.btn-small {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  padding: 60px 0 30px;
+  background-color: #1e3a5f;
+  color: silver;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: dodgerblue;
+  font-size: 28px;
+}
+
+.footer-logo img {
+  width: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: dodgerblue;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.footer a {
+  color: lightgray;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.footer-grid a {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-grid .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  border-radius: 10px;
+  background-color: dimgray;
+}
+
+.social img {
+  width: 18px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid dimgray;
+  font-size: 14px;
+}
+
+.payments {
+  display: flex;
+  gap: 10px;
+}
+
+.payments i {
+  font-size: 32px;
+  color: white;
+}
+
+.payments img {
+  height: 25px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: dimgray;
+}
+
+.btn-line {
+  background-color: white;
+  border-color: dodgerblue;
+  color: dodgerblue;
+}
+
+/* Hover effects */
+
+/* Buttons */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-blue:hover {
+  background-color: royalblue;
+  border-color: royalblue;
+}
+
+.btn-outline:hover {
+  background-color: whitesmoke;
+}
+
+.btn-line:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.btn-white:hover {
+  background-color: whitesmoke;
+}
+
+.btn-small:hover {
+  transform: none;
+}
+
+/* Feature cards */
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px silver;
+}
+
+/* Product image zoom */
+.product:hover .product-image img {
+  transform: scale(1.1);
+}
+
+/* Footer links */
+.footer a:hover {
+  color: white;
+}
+
+.btn-load {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  color: white;
+}
+
+.btn-load:hover {
+  background-color: white;
+  color: dodgerblue;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-image,
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    position: static;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .price-now {
+    font-size: 32px;
+  }
+}
