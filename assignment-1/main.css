@@ -89,6 +89,7 @@ section h2 {
 }
 
 .about-content {
+  overflow: auto;
 }
 
 .about-content img {
@@ -133,6 +134,7 @@ section h2 {
 
 .skills-list {
   list-style: none;
+  overflow: auto;
 }
 
 .skills-list li {
@@ -210,6 +212,7 @@ section h2 {
 #contact li {
   display: inline-block;
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #contact a {
@@ -257,6 +260,10 @@ footer span {
     width: 48%;
     margin-right: 4%;
     margin-bottom: 14px;
+  }
+
+  .skills-list li:nth-child(5n) {
+    margin-right: 4%;
   }
 
   .skills-list li:nth-child(2n) {
