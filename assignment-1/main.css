@@ -89,7 +89,6 @@ section h2 {
 }
 
 .about-content {
-  overflow: auto;
 }
 
 .about-content img {
@@ -134,7 +133,6 @@ section h2 {
 
 .skills-list {
   list-style: none;
-  overflow: auto;
 }
 
 .skills-list li {
@@ -244,7 +242,7 @@ footer span {
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .about-content img {
     float: none;
     display: block;
